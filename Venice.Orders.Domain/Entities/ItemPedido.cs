@@ -1,8 +1,16 @@
-﻿namespace Venice.Domain.Entities;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
-public class ItemPedido
+namespace Venice.Domain.Entities
 {
-    public string Produto { get; set; } = null!;
-    public int Quantidade { get; set; }
-    public decimal PrecoUnitario { get; set; }
+    public class ItemPedido
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? Id { get; set; }
+        public Guid PedidoId { get; set; } 
+        public string Produto { get; set; } = null!;
+        public int Quantidade { get; set; }
+        public decimal PrecoUnitario { get; set; }
+    }
 }

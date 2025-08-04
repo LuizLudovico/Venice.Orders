@@ -1,9 +1,10 @@
 ﻿using Venice.Domain.Entities;
 
-namespace Venice.Domain.Interfaces.Services;
-
-public interface IPedidoService
+namespace Venice.Domain.Interfaces.Services
 {
-    Task<Pedido> CriarPedidoAsync(Pedido pedido, List<ItemPedido> itens);
-    Task<(Pedido pedido, List<ItemPedido> itens)> ObterPedidoCompletoAsync(Guid id);
+    public interface IPedidoService
+    {
+        Task<Pedido> CriarPedidoAsync(Pedido pedido, List<ItemPedido> itens);
+        Task<(Pedido pedido, List<ItemPedido> itens)> ObterPedidoCompletoAsync(Guid id);
+    }
 }

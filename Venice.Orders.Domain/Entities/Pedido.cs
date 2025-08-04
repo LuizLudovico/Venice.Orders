@@ -10,8 +10,7 @@ public class Pedido
     public Guid Id { get; private set; }
     public int ClienteId { get; private set; }
     public DateTime Data { get; private set; }
-    public string Status { get; private set; }
-    public List<ItemPedido> Itens { get; private set; } = new();
+    public string Status { get; private set; }   
 
     public Pedido(Guid id, int clienteId, DateTime data, string status)
     {
@@ -24,10 +23,5 @@ public class Pedido
     public static Pedido Criar(int clienteId, DateTime data, string status)
     {
         return new Pedido(Guid.NewGuid(), clienteId, data, status);
-    }
-
-    public void AdicionarItens(List<ItemPedido> itens)
-    {
-        Itens.AddRange(itens);
-    }
+    }    
 }
