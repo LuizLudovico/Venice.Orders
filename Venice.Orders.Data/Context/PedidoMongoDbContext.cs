@@ -9,6 +9,9 @@ namespace Venice.Data.Context
 
         public PedidoMongoDbContext(string connectionString, string databaseName)
         {
+            ArgumentNullException.ThrowIfNull(connectionString);
+            ArgumentNullException.ThrowIfNull(databaseName);
+            
             var client = new MongoClient(connectionString);
             _database = client.GetDatabase(databaseName);
         }

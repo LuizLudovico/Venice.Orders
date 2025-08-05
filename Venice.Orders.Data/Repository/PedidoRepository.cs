@@ -1,5 +1,5 @@
 ﻿using Venice.Domain.Entities;
-using Venice.Orders.Domain.Interfaces;
+using Venice.Domain.Interfaces.Repository;
 using MongoDB.Driver;
 using Venice.Data.Context;
 using Microsoft.EntityFrameworkCore;
@@ -44,5 +44,4 @@ namespace Venice.Data.Repository
             return await _mongoCollection.Find(x => x.PedidoId == pedidoId).ToListAsync();
         }
     }
-
 }

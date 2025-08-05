@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 using Venice.Data.Repository;
-using Venice.Orders.Domain.Interfaces;
+using Venice.Domain.Interfaces.Repository;
 
 namespace CrossCutting.DependencyInjection
 {

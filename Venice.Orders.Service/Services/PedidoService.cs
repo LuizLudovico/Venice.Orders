@@ -3,7 +3,7 @@ using Venice.Domain.Events;
 using Venice.Domain.Interfaces.Bus;
 using Venice.Domain.Interfaces.Cache;
 using Venice.Domain.Interfaces.Services;
-using Venice.Orders.Domain.Interfaces;
+using Venice.Domain.Interfaces.Repository;
 using Venice.Service.DTOs;
 
 namespace Venice.Service.Services

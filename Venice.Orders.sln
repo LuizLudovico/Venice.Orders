@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BFAFF494-6F6E-4BFC-98CB-0FC9A1F6ECB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venice.Orders.Tests", "Venice.Orders.Tests\Venice.Orders.Tests.csproj", "{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{E836E5FB-6B98-2FF3-76AF-6275AFFCD702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E836E5FB-6B98-2FF3-76AF-6275AFFCD702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E836E5FB-6B98-2FF3-76AF-6275AFFCD702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{CE3A5A50-30F3-969E-6866-BD94F20E4EAA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{F349F07F-9445-12E9-36F4-1B3F092293E3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{E836E5FB-6B98-2FF3-76AF-6275AFFCD702} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890} = {BFAFF494-6F6E-4BFC-98CB-0FC9A1F6ECB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A22BA4B3-5D99-477E-8308-0D35584AC712}

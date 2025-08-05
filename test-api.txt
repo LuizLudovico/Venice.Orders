@@ -1,0 +1,64 @@
+### Teste da API Venice.Orders
+### Este arquivo pode ser usado com extensões como "REST Client" no VS Code
+
+### 1. Criar um novo pedido
+POST http://localhost:5000/api/Pedidos
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "data": "2024-01-15T10:30:00Z",
+  "status": "Pendente",
+  "itens": [
+    {
+      "produto": "Produto Teste 1",
+      "quantidade": 2,
+      "precoUnitario": 15.50
+    },
+    {
+      "produto": "Produto Teste 2",
+      "quantidade": 1,
+      "precoUnitario": 25.00
+    }
+  ]
+}
+
+### 2. Criar outro pedido
+POST http://localhost:5000/api/Pedidos
+Content-Type: application/json
+
+{
+  "clienteId": 2,
+  "data": "2024-01-15T14:45:00Z",
+  "status": "Aprovado",
+  "itens": [
+    {
+      "produto": "Produto Premium",
+      "quantidade": 1,
+      "precoUnitario": 99.99
+    }
+  ]
+}
+
+### 3. Obter um pedido específico (substitua {id} pelo ID retornado na criação)
+GET http://localhost:5000/api/Pedidos/550e8400-e29b-41d4-a716-446655440000
+
+### 4. Teste com dados inválidos (deve retornar 400)
+POST http://localhost:5000/api/Pedidos
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "data": "2024-01-15T10:30:00Z",
+  "status": "Pendente",
+  "itens": []
+}
+
+### 5. Teste com ID inexistente (deve retornar 404)
+GET http://localhost:5000/api/Pedidos/00000000-0000-0000-0000-000000000000
+
+### 6. Health Check (se implementado)
+GET http://localhost:5000/health
+
+### 7. Swagger/OpenAPI (se configurado)
+GET http://localhost:5000/swagger 

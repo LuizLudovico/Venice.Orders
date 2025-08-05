@@ -7,8 +7,8 @@ namespace Venice.Service.Bus;
 
 public class RabbitMQMessageBus : IMessageBus, IDisposable
 {
-    private IConnection _connection;
-    private IModel _channel;
+    private IConnection? _connection;
+    private IModel? _channel;
 
     public RabbitMQMessageBus()
     {
@@ -37,6 +37,11 @@ public class RabbitMQMessageBus : IMessageBus, IDisposable
 
     public Task PublicarPedidoCriadoAsync(object mensagem)
     {
+        if (_channel == null)
+        {
+            throw new InvalidOperationException("Canal RabbitMQ não foi inicializado.");
+        }
+
         var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(mensagem));
 
         _channel.BasicPublish(
@@ -53,5 +58,8 @@ public class RabbitMQMessageBus : IMessageBus, IDisposable
     {
         _channel?.Close();
         _connection?.Close();
+        
+        _channel?.Dispose();
+        _connection?.Dispose();
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Venice.Domain.Entities;
 
-namespace Venice.Orders.Domain.Interfaces
+namespace Venice.Domain.Interfaces.Repository
 {
     public interface IPedidoRepository
     {
